@@ -1,25 +1,25 @@
-!(function () {
+(function () {
 
-  function onStartedDownload(id) {
+  function handleDownload(id) {
     console.log(`Started downloading: ${id}`);
   }
-  
-  function onFailed(error) {
+
+  function handleError(error) {
     console.log(`Download failed: ${error}`);
   }
-  
+
   /**
    * @function getDownload
    * @param  {type} url      Image URL
    * @param  {type} filename Filename of saved image
    */
-  function getDownload({ url, filename }) {  
+  function getDownload({ url, filename }) {
     const props = { url, filename, conflictAction: 'uniquify' };
     browser.downloads.download(props)
       .then(handleDownload)
       .catch(handleError);
   }
-  
+
   browser.runtime.onMessage.addListener(getDownload);
 
-})();
+}());

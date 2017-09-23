@@ -1,4 +1,4 @@
-!(function () {
+(function () {
 
   if (window.hasRun) return;
 
@@ -21,12 +21,12 @@
     const filename = url.split('/').pop();
     browser.runtime.sendMessage({ url, filename });
   }
-  
+
   /**
    * @function grabImages
    * @param  {Object} message Message from onFocus
    */
-  function grabImages(message) {
+  function grabImages() {
     getImages().forEach(function (image) {
       image.addEventListener('dblclick', handleImage, false);
     });
@@ -34,4 +34,4 @@
 
   browser.runtime.onMessage.addListener(grabImages);
 
-})();
+}());

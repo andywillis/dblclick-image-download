@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "dblclick-image-download",
+  "name": "uws-dblclick-image-download",
   "version": "1.0",
   "description": "Downloads images when you double-click on them",
   "icons": {
