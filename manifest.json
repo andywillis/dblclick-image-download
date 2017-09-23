@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "dblclick-image-download",
-  "version": "2.0",
-  "description": "Downloads an image on dblclick",
+  "version": "1.0",
+  "description": "Downloads images when you double-click on them",
   "icons": {
     "48": "icons/avatar-48.png"
   },
